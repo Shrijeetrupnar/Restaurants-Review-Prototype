@@ -8,10 +8,6 @@ import javax.persistence.ManyToOne;
 @Embeddable
 public class RatingId implements Serializable {
 	
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = -1342409437211907114L;
 	private Users users;
 	private RestaurantList restaurantList;
 	
