@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+<title>Restaurants Registration</title>
+
+</head>
+<body><h2>Register a Restaurant</h2>
+
+
+<form action="" method="post">
+<input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
+ Name : <input type="text" th:field="${restaurantList.title}"/></br>
+ Address :<input type="text" th:field="${restaurantList.description}"/></br>
+ Status: <input type="text" th:field="${restaurantList.status}"/></br>
+
+</br>
+<button type="submit">Create a Restaurant</button>
+
+
+</form>
+
+
+</body>
+
+
+
+</html>

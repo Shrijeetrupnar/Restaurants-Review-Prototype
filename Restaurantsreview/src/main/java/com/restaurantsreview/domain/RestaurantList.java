@@ -19,7 +19,7 @@ public class RestaurantList {
 		return id;
 	}
 	public void setId(Long restaurantId) {
-		this.id = id;
+		this.id = restaurantId;
 	}
 	public String getTitle() {
 		return title;
@@ -39,9 +39,15 @@ public class RestaurantList {
 	public void setStatus(String status) {
 		this.status = status;
 	}
+	@Override
+	public String toString() {
+		return "RestaurantList [id=" + id + ", title=" + title + ", description=" + description + ", status=" + status
+				+ "]";
+	}
+	
 
 	
-	
+
 	
 
 }
