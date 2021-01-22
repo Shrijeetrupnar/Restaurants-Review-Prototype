@@ -28,8 +28,8 @@ public class RestaurantRegistrationController {
 		
 		RestaurantList restaurantList1 =	restaurantRegistrationService.save(restaurantList);
 		
-		System.out.println("non- saved :" +restaurantList);
-		System.out.println("saved :" +restaurantList1);
+//		System.out.println("non- saved :" +restaurantList);
+//		System.out.println("saved :" +restaurantList1);
 		return "redirect:/dashboard";
 		
 	}
