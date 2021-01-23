@@ -1,5 +1,7 @@
 package com.restaurantsreview.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -16,6 +18,14 @@ public class UserService {
 	
 	@Autowired
 	private PasswordEncoder passwordEncoder;
+	
+	
+	private List<Users> userList;
+
+	public List<Users> getUserList() {
+		return userRepo.findAll();
+	}
+	
 	
 	public Users save(Users user) {
 		
