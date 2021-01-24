@@ -9,6 +9,8 @@ import com.restaurantsreview.domain.RestaurantList;
 
 public interface RestaurantListRepository extends JpaRepository<RestaurantList,Long> {
 
+	
+
 	List<RestaurantList> findByTitle(String title);
 	
 }
