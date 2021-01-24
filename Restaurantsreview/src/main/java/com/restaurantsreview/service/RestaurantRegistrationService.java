@@ -15,6 +15,12 @@ public class RestaurantRegistrationService {
 	private RestaurantListRepository restaurantRepo;
 	List<RestaurantList> restaurantList ;
 	
+	
+	public RestaurantList getRestaurantInfo(Long id) {
+		
+		return restaurantRepo.getOne(id);
+		
+	}
 
 	public List<RestaurantList> getResaturantList(){
 		

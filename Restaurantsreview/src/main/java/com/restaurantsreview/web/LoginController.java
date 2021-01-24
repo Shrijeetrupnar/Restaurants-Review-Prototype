@@ -33,7 +33,6 @@ public class LoginController {
 	public String registerPost(Users user) {
 		
 		userService.save(user);
-		
 		return "redirect:/login";
 		
 	}
