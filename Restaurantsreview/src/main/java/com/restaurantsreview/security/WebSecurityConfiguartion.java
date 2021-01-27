@@ -47,6 +47,7 @@ public class WebSecurityConfiguartion extends WebSecurityConfigurerAdapter{
 				.antMatchers("/").permitAll()
 				.antMatchers("/register").permitAll()
 				 .antMatchers("/restaurantRegistration").permitAll()
+				 .antMatchers("/restaurantInfo").permitAll()
 				.anyRequest().hasRole("USER").and()
 			.formLogin()
 				.loginPage("/login")
