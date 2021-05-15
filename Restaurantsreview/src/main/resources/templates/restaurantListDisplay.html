@@ -68,7 +68,7 @@
 
 					<tr th:each="restaurantList : ${restaurantList}">
 						<td><span th:text="${restaurantList.id}"></span></td>
-						@{/userLogin/{userId}(userId=${user.userId})}
+<!-- 						@{/userLogin/{userId}(userId=${user.userId})} -->
 						<td><a th:href="@{'restaurantInfo/' + ${restaurantList.id}}"><span th:text="${restaurantList.title}"></span></a></td>
 						<td><span th:text="${restaurantList.description}"></span></td>
 						<td><span th:text="${restaurantList.status}"></span></td>

@@ -14,5 +14,9 @@ public interface RestaurantReviewRepository extends JpaRepository<Review, Long> 
 //	List<Review> findByPk(Review pk); by
 	
 	Optional<Review> findById(Long id);
+	
+	List<Review> findByRestaurantId(Long restaurantId);
+
+	//List<Review> findByRestaurantId(Long id);
 		
 }

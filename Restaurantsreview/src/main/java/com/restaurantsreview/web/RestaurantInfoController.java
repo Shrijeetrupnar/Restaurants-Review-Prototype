@@ -1,5 +1,7 @@
 package com.restaurantsreview.web;
 
+import java.util.List;
+
 import org.apache.tomcat.util.net.openssl.ciphers.Authentication;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.annotation.Secured;
@@ -42,9 +44,18 @@ public class RestaurantInfoController {
 		RestaurantList restaurantList = restaurantRegistrationService.getRestaurantInfo(restaurantId);
 
 		System.out.println(restaurantList);
-
+		
+		List<Review> reviewList= reviewRegistrationService.getResaturantReviewList(restaurantId);
+        List<Users> userList = userRepo.findAll();
+        
+       
+        System.out.print(userList);
+        
 		model.addAttribute(restaurantList);
 		model.put("review", new Review());
+		model.addAttribute(reviewList);
+		model.addAttribute(userList);
+		
 		return "restaurantInfo";
 	}
 
@@ -58,10 +69,7 @@ public class RestaurantInfoController {
 		// review.setPk(review.getPk());
 
 //		reviewId.setPk(reviewId.se);
-		System.out.println(review);
-		System.out.println();
-		System.out.println();
-		System.out.println();
+
 		org.springframework.security.core.Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
 		String currentPrincipalName = authentication.getName();
 		

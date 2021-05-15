@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.restaurantsreview.domain.RestaurantList;
 import com.restaurantsreview.domain.Review;
 import com.restaurantsreview.repositories.RestaurantReviewRepository;
 
@@ -14,6 +15,13 @@ public class ReviewRegistrationService {
 	@Autowired
 	private RestaurantReviewRepository restaurantReviewRepo;
 	List<Review> restaurantReviewList ;
+	
+	
+	public List<Review> getResaturantReviewList(Long restaurantId){
+		
+		List<Review> restaurantReviewList	=  restaurantReviewRepo.findByRestaurantId(restaurantId);
+		return restaurantReviewList;
+	}
 	
 
 	public List<Review> getResaturantReviewList(){
