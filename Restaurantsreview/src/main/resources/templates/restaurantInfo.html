@@ -41,6 +41,107 @@
 		Welcome to - <span th:text="${restaurantList.title}"></span>
 		Restaurant
 	</h1>
+	
+	
+	
+	
+	<div class="container">
+
+
+		<div class="card" style="margin-top: 1.5em;" th:each="reviewList : ${reviewList}">
+				
+			<div class="card-header">
+				<span th:text="${reviewList.userId}"></span>
+			</div>
+
+			<div class="card-body">
+			
+			<span th:text="${reviewList.reviewText}"></span>
+			
+			</div>
+			</div>
+			</div>
+			
+	
+	
+	
+	
+	
+	
+	
+
+
+
+<!-- <table class="table table-bordered table-hover table-striped  "> -->
+
+
+<!-- 	<thead > -->
+<!-- 					<tr class="col-12 col-sm-9 col-md-10 bg-dark text-white"> -->
+											
+
+<!-- 					</tr> -->
+<!-- 				</thead> -->
+<!-- 				<tbody > -->
+
+<!-- 					<tr th:each="reviewList : ${reviewList}"> -->
+					
+					
+					
+<!-- 						<td><span th:text="${reviewList.reviewText}"></span></td> -->
+						
+						
+<!-- 						<td><span th:text="${reviewList.userId}"></span></td> -->
+					
+						
+<!-- 					</tr> -->
+
+
+<!-- 				</tbody> -->
+<!-- 			</table>  -->
+
+   
+
+<!-- </div> -->
+
+
+
+<!-- 	<ul class="list-group " th:each="reviewList : ${reviewList}"> -->
+<!-- 		<li class="list-group-item list-group-item-primary"><span th:text="${reviewList.reviewText}"></span></li> -->
+<!-- 		<li class="list-group-item list-group-item-secondary"><span th:text="${reviewList.userId}"></span></li> -->
+
+<!-- 	</ul> -->
+
+<!-- <ul class="list-group" > -->
+<!-- <div class="card" style="width: 18rem;"> -->
+<!--   <div class="card-body" th:each="reviewList : ${reviewList}"> -->
+<!--     <h5 class="card-title"><span th:text="${reviewList.userId}"></span></h5> -->
+    
+<!--     <p class="card-text"><span th:text="${reviewList.reviewText}"></span></p> -->
+
+
+<!--  <h5="card-title"><span th:text="${userList.userName=${reviewList.userId}"></span></h5> -->
+
+<!-- <p class="card-text"> -->
+<!-- <li class="list-group-item list-group-item-primary"><span th:text="${reviewList.reviewText}"></span></li> </p> -->
+
+
+  </div>
+</div>
+
+</ul>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/><br/>
+	<br/>
+	
+	
+	
+	
 	<div class="container">
 
 

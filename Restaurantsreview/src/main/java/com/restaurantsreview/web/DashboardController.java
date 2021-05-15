@@ -31,4 +31,13 @@ public class DashboardController {
 		return "dashboard";
 	}
 	
+	
+	@GetMapping("/restaurantInfo")
+	public String dashboard1(Model model) {
+
+	
+		return "restaurantInfo";
+	}
+	
+	
 }
